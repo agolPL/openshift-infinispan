@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'groovy'
+
+    id 'idea'
+    id 'maven'
+    id 'maven-publish'
+    id "org.springframework.boot" version "1.4.2.RELEASE"
+}
+
+
+project.group 'pl.agol'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'org.infinispan', name: 'infinispan-core', version: '8.2.4.Final'
+}
